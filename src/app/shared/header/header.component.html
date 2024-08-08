@@ -1,0 +1,64 @@
+<header class="bg-white shadow-lg w-full overflow-hidden border-box sticky top-0">
+  <div class="flex lg:max-w-[1080px] h-[80px] md:mx-auto mx-[7px] justify-between items-center gap-10">
+    <img src="https://png.pngtree.com/png-clipart/20220719/original/pngtree-food-logo-png-image_8366720.png" alt="" class="max-w-[70px] bg-blend-darken">
+    <div class="flex items-center gap-2">
+      <div class="lg:max-w-[200px] flex cursor-pointer " (click)="open()">
+        <mat-icon>location_on</mat-icon>
+        <div class="max-w-[170px] ">
+          <div class="flex gap-2 items-center">
+            <span class="font-bold">Belagavi</span>
+            <mat-icon class="text-[18px]  mt-[1.5px]">keyboard_arrow_down</mat-icon>
+          </div>
+          <div class="w-full overflow-hidden whitespace-nowrap text-ellipsis text-[12px]">
+            laxmi galli anagol belagavi
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      
+    </div>
+    <!-- Search Bar -->
+    <div class="flex-grow w-auto hidden lg:block relative lg:max-w-[250px]">
+      <input type="text" class="w-full p-1 text-black bg-gray-100 border rounded-lg focus:outline-none focus:border-gray-200 " placeholder="Search..."/>
+      <mat-icon class="absolute right-2 top-1.5">search</mat-icon>
+    </div>
+    <!-- Navigation Links -->
+    <div class="  text-gray-700 hover:text-blue-500 hidden lg:flex items-center">
+      <mat-icon class="mr-2">filter_list</mat-icon>
+      Category
+    </div>
+    <div class="  text-gray-700 hover:text-blue-500 hidden lg:flex items-center">
+      <mat-icon class="mr-2">shopping_cart</mat-icon>
+      Cart
+    </div>
+    <div class="  text-gray-700 hover:text-blue-500 hidden lg:flex items-center">
+      <mat-icon class="mr-2">account_circle</mat-icon>
+      Login
+    </div>
+    <!-- Hamburger Icon -->
+    <div class="lg:hidden flex items-center">
+      <button (click)="toggleMenu()">
+        <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+</header>
+<div *ngIf="menuOpen" class="flex flex-col lg:hidden mt-4 p-4">
+  <div class="flex-grow w-auto  p-2">
+    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Search..."/>
+  </div>
+  <div class="flex items-center text-gray-700 hover:text-blue-500 mt-2 gap-8  p-2">
+    <mat-icon class="mr-2">filter_list</mat-icon>
+    Category
+  </div>
+  <div class="flex items-center text-gray-700 hover:text-blue-500 mt-2 gap-8  p-2">
+    <mat-icon class="mr-2">shopping_cart</mat-icon>
+    Cart
+  </div>
+  <div class="flex items-center text-gray-700 hover:text-blue-500 mt-2 gap-8 p-2">
+    <mat-icon class="mr-2">account_circle</mat-icon>
+    Login
+  </div>
+</div>

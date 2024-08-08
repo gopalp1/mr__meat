@@ -1,0 +1,49 @@
+<div class="my-4">
+  <h1 class="text1" style="margin: 0">Bestsellers</h1>
+  <span class="font-thin">Fresh meats at extra special prices</span>
+  <div class="relative flex items-center my-4">
+    <button
+      class="shadow-lg absolute lg:-left-12 hidden lg:flex"
+      (click)="scrollLeft()"
+    >
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="cards-container" #scrollable>
+      <div
+      class="card rounded-md"
+        *ngFor="let item of items"
+        [class.view-all]="item.isViewAll"
+      >
+        <div class="relative">
+          <img [src]="item.image" alt="" class="shadow-lg rounded-md w-full" />
+          <span
+            class="shadow-xl absolute border rounded-md -right-4 -bottom-5 py-1 px-2 bg-gray-50 text-red-700 shad"
+          >
+            <mat-icon>add</mat-icon>
+          </span>
+        </div>
+        <div class="py-3 mt-3 text-box">
+          <span
+            class="text-sm lg:text-base font-medium h-[44px] overflow-hidden"
+            style="font-size: 15px"
+            >{{ item.title }}</span
+          >
+          <p class="text-xs lg:text-sm line-clamp-2">
+            {{ item.quantity + " |" }}
+            <span class="text-[12px] text-gray-500 font-medium" >{{ item.pieces + " |" }}
+            </span>
+            <span class="text-[12px] text-gray-500 font-medium"
+              >{{ item.serves }}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="shadow-lg absolute lg:-right-12 hidden lg:flex"
+      (click)="scrollRight()"
+    >
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+</div>
