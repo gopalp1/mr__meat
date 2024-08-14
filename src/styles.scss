@@ -5,11 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 html, body { height: 100%;box-sizing: border-box;}
-body { margin: 0; font-family: Lato Regular, sans-serif; }
+body { margin: 0; font-family: 'Lato Regular', sans-serif;}
 .custom-dialog-container{
     @apply lg:w-[1080px] w-full rounded-md
     }
-
-
-
-
+    .text1{
+        font-family: Lato Bold !important;
+        color: #0d0d0e !important;
+        line-height: 128% !important;
+        font-weight: 400 !important;
+        font-size: 28px !important;
+    }

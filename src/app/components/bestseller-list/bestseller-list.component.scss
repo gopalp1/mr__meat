@@ -1,0 +1,11 @@
+
+.custom-icon {
+    width: auto !important;  /* Remove default width */
+    height: auto !important; /* Remove default height */
+    padding-right: 4px !important;
+  }
+
+  ::ng-deep .mat-button-toggle-label-content {
+    line-height: 25px !important;
+    padding: 0 8px !important;
+}

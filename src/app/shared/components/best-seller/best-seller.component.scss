@@ -6,42 +6,39 @@
     scroll-behavior: smooth;
     width: 100%; /* Adjust width as needed */
     gap: 20px;
+
+    .card {
+      flex: 0 0 auto;
+      width: 225px; /* Adjust width as needed */
+    }
+    
+    button {
+      background-color:white;
+      color:black;
+      padding:  5px;
+      cursor: pointer;
+      border: #ddd;
+      border-radius: 5px;
+    }
+    .text-box{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+   
+    
+    .view-all {
+      cursor: pointer;
+      color: rgb(227, 56, 113);
+      display: flex;
+      justify-content: center;
+      margin: auto 0;
+    }
+    
+
+
   }
   .cards-container::-webkit-scrollbar {
     width: 0; 
     background: transparent;  
-}
-  .card {
-    flex: 0 0 auto;
-    width: 225px; /* Adjust width as needed */
-  }
-  
-  button {
-    background-color:white;
-    color:black;
-    padding:  5px;
-    cursor: pointer;
-    border: #ddd;
-    border-radius: 5px;
-  }
-  .text-box{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
- 
-  
-  .view-all {
-    cursor: pointer;
-    color: rgb(227, 56, 113);
-    display: flex;
-    justify-content: center;
-    margin: auto 0;
-  }
-  
-  .text1{
-    font-family: Lato Bold;
-    color: #0d0d0e;
-    line-height: 128%;
-    font-weight: 600;
 }

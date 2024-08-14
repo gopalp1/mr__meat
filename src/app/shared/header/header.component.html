@@ -1,6 +1,6 @@
 <header class="bg-white shadow-lg w-full overflow-hidden border-box sticky top-0">
   <div class="flex lg:max-w-[1080px] h-[80px] md:mx-auto mx-[7px] justify-between items-center gap-10">
-    <img src="https://png.pngtree.com/png-clipart/20220719/original/pngtree-food-logo-png-image_8366720.png" alt="" class="max-w-[70px] bg-blend-darken">
+    <img src="https://png.pngtree.com/png-clipart/20220719/original/pngtree-food-logo-png-image_8366720.png" alt="" class="max-w-[70px] bg-blend-darken" routerLink="home">
     <div class="flex items-center gap-2">
       <div class="lg:max-w-[200px] flex cursor-pointer " (click)="open()">
         <mat-icon>location_on</mat-icon>
@@ -20,19 +20,19 @@
     </div>
     <!-- Search Bar -->
     <div class="flex-grow w-auto hidden lg:block relative lg:max-w-[250px]">
-      <input type="text" class="w-full p-1 text-black bg-gray-100 border rounded-lg focus:outline-none focus:border-gray-200 " placeholder="Search..."/>
+      <input type="text" class="w-full p-1 text-black bg-gray-100 border rounded-lg focus:outline-none focus:border-[#D11243] " placeholder="Search..."/>
       <mat-icon class="absolute right-2 top-1.5">search</mat-icon>
     </div>
     <!-- Navigation Links -->
-    <div class="  text-gray-700 hover:text-blue-500 hidden lg:flex items-center">
+    <div class="  text-gray-700 hover:text-[#D11243]  hidden lg:flex items-center">
       <mat-icon class="mr-2">filter_list</mat-icon>
       Category
     </div>
-    <div class="  text-gray-700 hover:text-blue-500 hidden lg:flex items-center">
+    <div class="  text-gray-700 hover:text-[#D11243] hidden lg:flex items-center">
       <mat-icon class="mr-2">shopping_cart</mat-icon>
       Cart
     </div>
-    <div class="  text-gray-700 hover:text-blue-500 hidden lg:flex items-center">
+    <div class="  text-gray-700 hover:text-[#D11243] hidden lg:flex items-center">
       <mat-icon class="mr-2">account_circle</mat-icon>
       Login
     </div>
@@ -49,15 +49,15 @@
   <div class="flex-grow w-auto  p-2">
     <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Search..."/>
   </div>
-  <div class="flex items-center text-gray-700 hover:text-blue-500 mt-2 gap-8  p-2">
+  <div class="flex items-center text-gray-700 hover:text-[#D11243] mt-2 gap-8  p-2">
     <mat-icon class="mr-2">filter_list</mat-icon>
     Category
   </div>
-  <div class="flex items-center text-gray-700 hover:text-blue-500 mt-2 gap-8  p-2">
+  <div class="flex items-center text-gray-700 hover:text-[#D11243] mt-2 gap-8  p-2">
     <mat-icon class="mr-2">shopping_cart</mat-icon>
     Cart
   </div>
-  <div class="flex items-center text-gray-700 hover:text-blue-500 mt-2 gap-8 p-2">
+  <div class="flex items-center text-gray-700 hover:text-[#D11243] mt-2 gap-8 p-2">
     <mat-icon class="mr-2">account_circle</mat-icon>
     Login
   </div>

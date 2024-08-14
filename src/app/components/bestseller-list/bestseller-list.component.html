@@ -1,0 +1,51 @@
+<div class="container card-item lg:max-w-[1080px] md:mx-auto lg:p-0 p-2">
+  <div class="mt-4">
+    <h1 class="text1">Bestsellers</h1>
+  </div>
+  <div class="grid lg:grid-cols-3 grid-cols gap-6 box-border mt-3">
+    <div
+      class="hover:shadow-lg rounded-md"
+      *ngFor="let item of items | slice : 0 : 4"
+    >
+      <div class="">
+        <img [src]="item.image" alt="" class="shadow-lg rounded-md w-full" />
+      </div>
+      <div class="py-3 px-2 mt-2 text-box">
+        <span
+          class="text-sm lg:text-base font-medium h-[44px] overflow-hidden"
+          style="font-size: 15px"
+          >{{ item.title }}</span
+        >
+        <p class="pt-2">
+          {{ item.quantity + " |" }}
+          <span class="text-[12px] text-gray-500 font-medium"
+            >{{ item.pieces + " |" }}
+          </span>
+          <span class="text-[12px] text-gray-500 font-medium"
+            >{{ item.serves }}
+          </span>
+        </p>
+        <div>
+          <span>{{ item?.price }}</span>
+          <span class="text-sm mx-2 text-green-600">{{ item?.discount }}</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-xs font-medium text-gray-500">{{
+            item?.deliveryTime
+          }}</span>
+          <span *ngIf="item.order===0" (click)="addItem(item)"
+            class="border w-20 bg-red-700 py-1.5 pl-2 text-white rounded-md flex items-center justify-between"
+          >
+            <span>Add</span> <mat-icon class="text-[18px] custom-icon">add</mat-icon>
+          </span>
+        
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style" *ngIf="item.order>=1">
+            <mat-button-toggle  (click)="decrement(item)"><mat-icon class="text-red-700">remove</mat-icon></mat-button-toggle>
+            <mat-button-toggle [disabled]="true" class="text-black">{{item.order}}</mat-button-toggle>
+            <mat-button-toggle  (click)="increment(item)"><mat-icon class="text-red-700 ">add</mat-icon></mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

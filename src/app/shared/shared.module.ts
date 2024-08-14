@@ -10,6 +10,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BestSellerComponent } from './components/best-seller/best-seller.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 @NgModule({
   declarations: [
     FooterComponent,
@@ -24,6 +26,7 @@ import { BestSellerComponent } from './components/best-seller/best-seller.compon
     MatIconModule,
     MatDialogModule,
     FormsModule,
+    MatButtonToggleModule
   ],
   exports:[
     MatIconModule,
@@ -33,7 +36,8 @@ import { BestSellerComponent } from './components/best-seller/best-seller.compon
     HeaderComponent,
     LocationModalComponent,
     CategoriesComponent,
-    BestSellerComponent
+    BestSellerComponent,
+    MatButtonToggleModule
   ]
 })
 export class SharedModule { }
