@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-
+  itemsToShow = 12;
+    showViewMore = true;
   category=
     {
-      Label:"Shop by categories",
+      Label:"Our categories",
       subtitle: 'Freshest meats and much more!',
       fields:[
         {
@@ -83,6 +84,12 @@ export class CategoriesComponent implements OnInit {
     }
     
   
+  
+    // Method to load more items
+    viewMore() {
+      this.itemsToShow = this.category.fields.length;
+      this.showViewMore = false; // Hide "View More" when all items are shown
+    }
   constructor(){
 
   }

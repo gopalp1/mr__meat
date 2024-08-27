@@ -1,0 +1,13 @@
+@keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .plate {
+    animation: rotateAnimation 1s ease-in-out;
+  }
+  

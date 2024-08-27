@@ -1,0 +1,24 @@
+<!-- <div class="w-full bg-purple-300 ">
+    <div class=" flex items-center justify-between   container lg:max-w-[1080px] md:mx-auto lg:p-0 p-2  aspect-[16/7] md:aspect-[9/2]">
+        <img
+          src="https://assets.licious.in/OMS-Category/e19b032c-78c1-1a25-1cdc-134543e8e6bc/original/1715753753100.png"
+          alt="Delicious Food"
+          class="plate lg:w-60 lg:h-60 w-44 h-44 rounded-full transform transition-transform duration-700"
+        />
+        <span class=" lg:text-6xl text-4xl font-bold text-purple-900">Mr. Meat</span>
+    </div>
+  </div> -->
+  <div class="w-full bg-purple-300">
+    <div class="flex items-center justify-between container lg:max-w-[1080px] md:mx-auto lg:p-0 p-2 aspect-[16/7] md:aspect-[9/2]">
+      <img
+        src="https://assets.licious.in/OMS-Category/e19b032c-78c1-1a25-1cdc-134543e8e6bc/original/1715753753100.png"
+        alt="Delicious Food"
+        class="plate lg:w-60 lg:h-60 w-44 h-44 rounded-full transform transition-transform duration-700 ease-in-out"
+        [ngClass]="{ 'translate-x-full opacity-0': !imageVisible, 'translate-x-0 opacity-100': imageVisible }"
+      />
+      <span class="lg:text-6xl text-4xl font-bold text-purple-900">Mr. Meat</span>
+    </div>
+  </div>
+  
+  
+  

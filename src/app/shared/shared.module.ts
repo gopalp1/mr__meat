@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BestSellerComponent } from './components/best-seller/best-seller.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { BannersComponent } from './components/banners/banners.component';
+import { BannerContentComponent } from './components/banner-content/banner-content.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     HeaderComponent,
     LocationModalComponent,
     CategoriesComponent,
-    BestSellerComponent
+    BestSellerComponent,
+    BannersComponent,
+    BannerContentComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +41,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     LocationModalComponent,
     CategoriesComponent,
     BestSellerComponent,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    BannersComponent,
+    BannerContentComponent
   ]
 })
 export class SharedModule { }
