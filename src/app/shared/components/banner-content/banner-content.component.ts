@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'banner-content',
@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-content.component.scss']
 })
 export class BannerContentComponent  implements OnInit {
+ @Input()title!: string; 
+ @Input()subtitle!: string; 
+ @Input()img!: string; 
+
+
  
-    imageVisible = false;
-  
     ngOnInit() {
-      // Delay the appearance of the image by 500ms
-      setTimeout(() => {
-        this.imageVisible = true;
-      }, 1000);
+    
     }
  
 }

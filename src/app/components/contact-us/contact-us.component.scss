@@ -1,0 +1,24 @@
+.bg-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    font-size: 140px;
+    line-height: 100px;
+   color: rgb(217 200 200 / 64%)
+}
+.icon-box{
+    position: relative;
+    display: inline-block;
+    font-size: 70px;
+    line-height: 70px;
+    color: #fff;
+    margin-bottom: 44px;
+}
+
+.inner-box{
+    position: relative;
+    display: block;
+    padding: 47px 30px 24px 30px;
+}
+
