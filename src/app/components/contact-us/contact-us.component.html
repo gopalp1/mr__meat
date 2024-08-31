@@ -1,43 +1,40 @@
-<banner-content title="Contact Us" img="https://s3.envato.com/files/475740083/isolated_03.11.2023_%20(61%20of%20212).JPG"></banner-content>
+<banner-content [data]="data"></banner-content>
 
-<!-- Container for the Contact Information Section -->
 <div class="container lg:max-w-[1080px] mx-auto p-2 lg:my-16 my-6">
-  <!-- Contact Information Section -->
   <div class="bg-purple-600 py-10">
     <div class="px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-      <!-- Phone Number Section -->
       <div class="text-center md:border-r border-white">
         <div class="inner-box">
           <i class="fas fa-phone-alt fa-phone bg-icon"></i>
           <i class="fas fa-phone-alt fa-phone icon-box"></i>
         </div>
         <p class="text-2xl font-semibold mb-2">Phone Number</p>
-        <p>+91 9035254959</p>
-        <p>+91 9035254956</p>
+        <div *ngFor="let phoneNumber of contactInfo.contactNumber">
+          <p>{{ phoneNumber }}</p>
+        </div>
       </div>
-      <!-- Email Address Section -->
       <div class="text-center md:border-r border-white">
         <div class="inner-box">
           <i class="fas fa-envelope bg-icon"></i>
           <i class="fas fa-envelope icon-box"></i>
         </div>
         <p class="text-2xl font-bold mb-2">Email Address</p>
-        <a href="mailto:mrmeatsmys@gmail.com" class="hover:underline">mrmeatsmys&#64;gmail.com</a>
+        <a [href]="'mailto:' + contactInfo.email" class="hover:underline">
+          {{ contactInfo.email }}
+        </a>
       </div>
-      <!-- Office Address Section -->
       <div class="text-center">
         <div class="inner-box">
           <i class="fa-solid fa-location-dot bg-icon"></i>
           <i class="fa-solid fa-location-dot icon-box"></i>
         </div>
         <p class="text-2xl font-bold mb-2">Office Address</p>
-        <p class="text-xl font-medium">Urushabendra</p>
-        <p># G2-B KRS Road, Opp. Silentshore Hotel,</p>
-        <p>Hootagalli, Industrial area, Mysuru</p>
+        <div *ngFor="let line of contactInfo.address">
+          <p>{{ line }}</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 <app-form></app-form>
-
-

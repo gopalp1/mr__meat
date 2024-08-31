@@ -1,16 +1,14 @@
 @keyframes moveRotate {
   0% {
-    transform: translateX(-100%) rotate(0deg);
-  }
-  50% {
-    transform: translateX(50%) rotate(180deg);
+    transform: translateX(-200px) rotate(0deg);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0) rotate(360deg);
+    transform: translateX(0px) rotate(180deg);
+    opacity: 1;
   }
 }
 
 .animate-move-rotate {
   animation: moveRotate 3s ease-in-out forwards;
 }
-

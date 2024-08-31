@@ -1,36 +1,41 @@
-
-<div class="container lg:max-w-[1080px] md:mx-auto lg:p-0 p-2 ">
-    <app-banners banner="https://scontent.fblr4-1.fna.fbcdn.net/v/t39.30808-6/293291717_347928380851944_3459511125304481886_n.png?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HTBxoJcz6a8Q7kNvgH0uslZ&_nc_ht=scontent.fblr4-1.fna&oh=00_AYB9Qif4Y9S3SGYBDJvK4UxFAP4egPC_pscQ-5tlT2cYfA&oe=66D68FF2"></app-banners>
-    <app-best-seller></app-best-seller>
-    <app-categories></app-categories>
+<div class="container lg:max-w-[1080px] md:mx-auto lg:p-0 p-2">
+  <app-banners
+    banner="https://scontent.fblr4-1.fna.fbcdn.net/v/t39.30808-6/293291717_347928380851944_3459511125304481886_n.png?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HTBxoJcz6a8Q7kNvgH0uslZ&_nc_ht=scontent.fblr4-1.fna&oh=00_AYB9Qif4Y9S3SGYBDJvK4UxFAP4egPC_pscQ-5tlT2cYfA&oe=66D68FF2"
+  ></app-banners>
+  <app-best-seller></app-best-seller>
+  <app-categories></app-categories>
 </div>
 
 <!-- <div class="bg-purple-300 w-full "> -->
-  <div class="container lg:max-w-[1080px] md:mx-auto md:p-0 p-4 ">
-    <div class="inline-block  group mb-4">
-      <span class="text-4xl font-bold  block">Why Mr.Meat</span>
-      <div class="bg-purple-600  h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+<div class="container lg:max-w-[1080px] md:mx-auto md:p-0 p-4">
+  <div class="inline-block group mb-4">
+    <span class="text-4xl font-bold block">Why Mr.Meat</span>
+    <div
+      class="bg-purple-600 h-[2px] w-0 group-hover:w-full transition-all duration-500"
+    ></div>
+  </div>
+  <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
+    <div
+      *ngFor="let feature of features"
+      class="rounded-md p-6 hover:shadow-2xl bg-purple-600 text-white"
+    >
+      <p class="text-md font-medium mb-2 text-[18px]">{{ feature.title }}</p>
+      <p class="text-justify">{{ feature.description }}</p>
     </div>
-    <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
-        <div *ngFor="let feature of features" class=" rounded-md p-6 hover:shadow-2xl bg-purple-600  text-white">           
-          <p class="text-md font-medium mb-2 text-[18px] ">{{ feature.title }}</p>
-          <p class="">{{ feature.description }}</p>
-        </div>
+  </div>
+</div>
+<div class="">
+  <div class="bg-gray-50 px-4">
+    <div class="container lg:max-w-[1080px] md:mx-auto md:p-0 p-8 md:py-7">
+      <h2 class="text-lg font-bold mb-4">Cities We Serve</h2>
+      <div class="flex flex-wrap gap-4">
+        <span
+          *ngFor="let city of cities"
+          class="bg-white px-4 py-2 rounded-full shadow text-gray-800"
+        >
+          {{ city }}
+        </span>
       </div>
     </div>
- <!-- </div>  -->
-   <div class="">
-    <div class="bg-gray-50  px-4">
-        <div class="container lg:max-w-[1080px] md:mx-auto md:p-0  p-8  md:py-7 ">
-          <!-- Title -->
-          <h2 class="text-lg font-bold mb-4">Cities We Serve</h2>
-          <!-- Cities List -->
-          <div class="flex flex-wrap gap-4">
-            <span *ngFor="let city of cities" class="bg-white px-4 py-2 rounded-full shadow text-gray-800">
-              {{ city }}
-            </span>
-          </div>
-        </div>
-      </div>
-      
-   </div>  
+  </div>
+</div>

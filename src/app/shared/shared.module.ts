@@ -16,6 +16,7 @@ import { BannerContentComponent } from './components/banner-content/banner-conte
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormComponent } from './components/form/form.component';
+
 @NgModule({
   declarations: [
     FooterComponent,
