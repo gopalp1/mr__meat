@@ -5,7 +5,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LocationModalComponent } from './location-modal/location-modal.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoriesComponent } from './components/categories/categories.component';
@@ -13,7 +13,9 @@ import { BestSellerComponent } from './components/best-seller/best-seller.compon
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { BannersComponent } from './components/banners/banners.component';
 import { BannerContentComponent } from './components/banner-content/banner-content.component';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormComponent } from './components/form/form.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -22,7 +24,8 @@ import { BannerContentComponent } from './components/banner-content/banner-conte
     CategoriesComponent,
     BestSellerComponent,
     BannersComponent,
-    BannerContentComponent
+    BannerContentComponent,
+    FormComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +33,10 @@ import { BannerContentComponent } from './components/banner-content/banner-conte
     MatIconModule,
     MatDialogModule,
     FormsModule,
-    MatButtonToggleModule
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
+
   ],
   exports:[
     MatIconModule,
@@ -43,7 +49,11 @@ import { BannerContentComponent } from './components/banner-content/banner-conte
     BestSellerComponent,
     MatButtonToggleModule,
     BannersComponent,
-    BannerContentComponent
+    BannerContentComponent,
+    MatInputModule,
+    MatFormFieldModule,
+    FormComponent,
+
   ]
 })
 export class SharedModule { }

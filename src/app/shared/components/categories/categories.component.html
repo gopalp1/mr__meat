@@ -1,11 +1,11 @@
 <div class=" mb-8 my-4">
     <h1 class="text1  " style="margin: 0;">{{category.Label}}</h1>
     <!-- <span class=" font-thin " >{{category.subtitle}}</span> -->
-    <div class="grid lg:grid-cols-6 grid-cols-4 md:gap-x-16 md:gap-y-12 gap-y-4 gap-x-8 box-border my-3">
+    <div class="grid lg:grid-cols-6 grid-cols-3 md:gap-x-16 md:gap-y-12 gap-y-4 gap-x-8 box-border my-3">
         <div class="flex flex-col items-center" *ngFor="let item of category.fields | slice :0:itemsToShow">
             <img [src]="item.image" alt="" class="lg:w-32 lg:h-32 w-20 h-20">
             <span class="text-center">{{item.name}}</span>
         </div>   
     </div>
-    <p *ngIf="showViewMore" class="text-right text-[#d11243] mt-4 font-bold text-lg cursor-pointer" (click)="viewMore()">View more...</p>
+    <p *ngIf="showViewMore" class="text-right text-purple-900 mt-4 font-bold text-lg cursor-pointer" (click)="viewMore()">View more...</p>
 </div>

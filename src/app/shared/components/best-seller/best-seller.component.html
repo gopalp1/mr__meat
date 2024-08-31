@@ -3,7 +3,7 @@
   <span class="font-thin">Fresh meats at extra special prices</span>
   <div class="relative flex items-center my-4">
     <button
-      class="shadow-lg absolute lg:-left-12 hidden lg:flex"
+      class="shadow-lg absolute lg:-left-12 hidden lg:flex p-2"
       (click)="scrollLeft()"
     >
       <mat-icon>keyboard_arrow_left</mat-icon>
@@ -17,7 +17,7 @@
         <div class="relative" >
           <img [src]="item.image" alt="" class="shadow-lg rounded-md w-full" />
           <span
-            class="shadow-xl absolute border rounded-md -right-4 -bottom-5 py-1 px-2 bg-gray-50 text-red-700 shad"
+            class="shadow-xl absolute border rounded-md -right-4 -bottom-5 py-1 px-2 bg-gray-50 text-red-700 "
           >
             <mat-icon>add</mat-icon>
           </span>
@@ -38,12 +38,12 @@
           </p>
         </div>
       </div>
-        <div class="card bg-red-50 rounded-lg flex justify-center items-center" (click)="view('View All')">
-        <h3 class="text-red-700 font-bold">View All</h3>
+        <div class="card bg-purple-200 rounded-lg flex justify-center items-center" (click)="view('View All')">
+        <h3 class="text-purple-700 font-bold">View All</h3>
       </div>
     </div>
     <button
-      class="shadow-lg absolute lg:-right-12 hidden lg:flex"
+      class="shadow-lg absolute lg:-right-12 hidden lg:flex p-2"
       (click)="scrollRight()"
     >
       <mat-icon>keyboard_arrow_right</mat-icon>

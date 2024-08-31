@@ -1,0 +1,75 @@
+ <div class="mt-16 py-8">
+    <div class="container lg:max-w-[1080px] mx-auto -mt-16 p-3 bg-white rounded-lg shadow-lg">
+      <!-- Contact Form Header -->
+      <div class="text-center mt-4 mb-10">
+        <p class="text-2xl font-semibold mb-2 text-purple-600 px-4">Contact</p>
+        <span class="text-5xl font-bold">Get In Touch</span>
+      </div>
+      <!-- Contact Form -->
+      <form [formGroup]="contact">
+        <div class="grid lg:grid-rows-3 lg:grid-flow-col gap-6">
+          <!-- Name Input -->
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="Please enter your name"
+              name="name"
+              formControlName="name"
+            />
+            <mat-error *ngIf="f['name'].invalid && (f['name'].touched || f['name'].dirty)" class="custom-error">
+              <mat-error *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</mat-error>
+            </mat-error>
+        </mat-form-field>
+  
+          <!-- Mobile Number Input -->
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input
+              matInput
+              placeholder="Please enter mobile number"
+              name="mobileNum"
+              formControlName="mobileNum"
+            />
+            <mat-error *ngIf="f['mobileNum'].invalid && (f['mobileNum'].touched || f['mobileNum'].dirty)" class="">
+              <mat-error *ngIf="f['mobileNum'].errors && f['mobileNum'].errors['required']">Mobile number is required.</mat-error>
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- Email Input -->
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="Please enter email ID"
+              name="email"
+              formControlName="email"
+            />
+            <mat-error *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)" class="text-red-500">
+              <mat-error *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</mat-error>
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- Message Input -->
+          <mat-form-field class="example-full-width lg:row-span-3" appearance="outline">
+            <mat-label>Message</mat-label>
+            <textarea
+              matInput
+              placeholder="Please enter your message"
+              name="message"
+              formControlName="message"
+            ></textarea>
+            <mat-error *ngIf="f['message'].invalid && (f['message'].touched || f['message'].dirty)" class="text-red-500">
+              <mat-error *ngIf="f['message'].errors && f['message'].errors['required']">Message is required.</mat-error>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+      <!-- Submit Button -->
+      <div class="flex justify-end">
+        <button class="text-white p-4 bg-purple-600 rounded-lg font-semibold">SUBMIT</button>
+      </div>
+    </div>
+   </div> 
+
+  

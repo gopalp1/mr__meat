@@ -1,13 +1,16 @@
-@keyframes rotateAnimation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes moveRotate {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
   }
-  
-  .plate {
-    animation: rotateAnimation 1s ease-in-out;
+  50% {
+    transform: translateX(50%) rotate(180deg);
   }
-  
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+.animate-move-rotate {
+  animation: moveRotate 3s ease-in-out forwards;
+}
+
