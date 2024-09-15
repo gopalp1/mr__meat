@@ -19,3 +19,8 @@ export const CONTACT_BANNER = {
   title: 'Contact Us',
   img: 'https://s3.envato.com/files/475740083/isolated_03.11.2023_%20(61%20of%20212).JPG',
 };
+
+export const SERVICE_BANNER = {
+  title: 'Our Services',
+  img: 'https://s3.envato.com/files/475740083/isolated_03.11.2023_%20(61%20of%20212).JPG',
+};

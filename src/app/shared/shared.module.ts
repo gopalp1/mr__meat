@@ -10,12 +10,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BestSellerComponent } from './components/best-seller/best-seller.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BannersComponent } from './components/banners/banners.component';
 import { BannerContentComponent } from './components/banner-content/banner-content.component';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormComponent } from './components/form/form.component';
+import { GlassbreakbannerComponent } from './components/glassbreakbanner/glassbreakbanner.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormComponent } from './components/form/form.component';
     BannersComponent,
     BannerContentComponent,
     FormComponent,
+    GlassbreakbannerComponent,
   ],
   imports: [
     CommonModule,
@@ -36,10 +38,9 @@ import { FormComponent } from './components/form/form.component';
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
   ],
-  exports:[
+  exports: [
     MatIconModule,
     MatDialogModule,
     FormsModule,
@@ -54,7 +55,7 @@ import { FormComponent } from './components/form/form.component';
     MatInputModule,
     MatFormFieldModule,
     FormComponent,
-
-  ]
+    GlassbreakbannerComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

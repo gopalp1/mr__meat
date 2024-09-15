@@ -1,0 +1,73 @@
+<banner-content [data]="data"></banner-content>
+<section class="container lg:max-w-[1080px] mx-auto p-2 lg:my-16 my-6">
+  <mat-card class="p-4">
+    <div class="flex flex-col md:flex-row items-center lg:gap-x-8 gap-y-8">
+      <img
+        src="https://kolokhospital.com/wp-content/uploads/2017/11/bulk-order-icon-1.png"
+        alt="Delicious Meat Platter"
+        class="md:w-64 rounded-md slide-in-left"
+      />
+
+      <div class="tracking-[1.5px]">
+        <p
+          class="text-gray-600 mb-4 text-xl tracking-[1px] indent-16 text-justify"
+        >
+          At Mr.Meat, we make bulk ordering as easy and seamless as possible.
+          Whether you're planning a big family gathering, running a restaurant,
+          or simply want to buy in large quantities, our platform ensures you
+          can get the freshest meat delivered when you need it. With our bulk
+          order service, you can choose from a wide range of premium meats, add
+          them to your cart, and pick a future delivery date that works best for
+          you. You can even plan ahead for holidays or events by placing an
+          order today and scheduling delivery for a specific date in the future.
+          Our streamlined process allows you to select all the items you want,
+          make the payment upfront, and relax while we handle the rest. On the
+          selected date, we will deliver your bulk order to your doorstep,
+          ensuring that the meat is fresh and ready for use. With Mr.Meat, bulk
+          orders aren’t just convenient—they're tailored to your specific needs,
+          giving you full control over timing and quantity.
+        </p>
+      </div>
+    </div>
+  </mat-card>
+  <!-- <mat-card *ngFor="let highlight of highlights" class="mt-2 mb-2 p-4">
+    <mat-card-header class="items-center text-2xl">
+      <mat-icon class="text-2xl">{{ highlight?.icon }} </mat-icon>
+      {{ highlight.title }}
+    </mat-card-header>
+    <mat-card-content>
+      {{ highlight.description }}
+    </mat-card-content>
+  </mat-card> -->
+
+  <div class="text-center mt-6 text-5xl mb-4">
+    Download our App by clicking below
+  </div>
+  <div class="flex justify-center">
+    <img src="../../../assets/images/download.webp" style="width: 40%" />
+  </div>
+  <div class="text-5xl text-center mt-6 mb-4">
+    Easy steps to place bulk order
+  </div>
+  <mat-card
+    class="custom-card"
+    *ngFor="let step of steps; let i = index"
+    [class.expanded]="stepsInView[i]"
+    [attr.data-index]="i"
+  >
+    <div class="card-container" style="display: flex; align-items: center">
+      <div class="image-container" style="width: 130px">
+        <img
+          mat-card-image
+          src="{{ step?.image }}"
+          alt="Image description"
+          style="width: 130px; padding: 10px"
+        />
+      </div>
+      <div class="text-container">
+        <mat-card-title>{{ step.title }}</mat-card-title>
+        <mat-card-subtitle>{{ step.subText }}</mat-card-subtitle>
+      </div>
+    </div>
+  </mat-card>
+</section>

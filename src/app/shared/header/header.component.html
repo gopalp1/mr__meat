@@ -12,57 +12,18 @@
     />
 
     <div class="hidden lg:flex items-center gap-10 w-3/4 justify-end">
-      <div class="group relative">
+      <div class="group relative" *ngFor="let menu of menus">
         <a
           class="text-gray-700 hover:text-purple-900 hidden lg:flex items-center hover:font-semibold text-lg"
-          routerLink="/home"
+          routerLink="/{{ menu.url }}"
           routerLinkActive="active"
         >
           <!-- <mat-icon class="mr-2">home</mat-icon> -->
-          Home
+          {{ menu?.title }}
         </a>
         <span
           class="absolute left-0 bottom-0 w-full h-0.5 bg-purple-900 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
         ></span>
-      </div>
-
-      <div class="group relative">
-        <a
-          class="text-gray-700 hover:text-purple-900 hidden lg:flex items-center hover:font-semibold text-lg"
-          routerLink="/about-us"
-          routerLinkActive="active"
-        >
-          <!-- <mat-icon class="mr-2">info</mat-icon> -->
-          About Us
-        </a>
-        <span
-          class="absolute left-0 bottom-0 w-full h-0.5 bg-purple-900 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
-        ></span>
-      </div>
-
-      <div class="group relative">
-        <a
-          class="text-gray-700 hover:text-purple-900 hidden lg:flex items-center hover:font-semibold text-lg"
-          routerLink="/contact-us"
-          routerLinkActive="active"
-        >
-          <!-- <mat-icon class="mr-2">phone</mat-icon> -->
-          Contact Us
-        </a>
-        <span
-          class="absolute left-0 bottom-0 w-full h-0.5 bg-purple-900 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
-        ></span>
-      </div>
-      <div class="group relative">
-        <a
-          class="text-gray-700 hover:text-purple-900 hidden lg:flex items-center hover:font-semibold text-lg"
-          href="#"
-        >
-          <img
-            src="../../../assets/images/playstore.png"
-            style="width: 150px"
-          />
-        </a>
       </div>
     </div>
 
