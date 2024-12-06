@@ -1,5 +1,12 @@
 .active {
-    font-weight: bold;
-    color: #7b2cbf; /* Tailwind color */
-    border-bottom: 2px solid #7b2cbf;
-  }
+  font-weight: bold;
+  color: #7b2cbf; /* Tailwind color */
+  border-bottom: 2px solid #7b2cbf;
+}
+
+.action_buttons {
+  width: 80px;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  padding: 10px 0px;
+}

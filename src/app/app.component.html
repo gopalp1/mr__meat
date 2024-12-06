@@ -1,5 +1,6 @@
-
-<app-header></app-header>
+<div class="loader-container" *ngIf="isLoading">
+    <div class="spinner"></div>
+  </div>
 <div>
     <router-outlet></router-outlet>
 </div>

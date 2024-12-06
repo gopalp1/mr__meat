@@ -4,21 +4,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    margin: 0;
-    padding: 0;
-    outline: none; 
-    border: none;
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
 }
-html, body { height: 100%;box-sizing: border-box;}
-body { margin: 0; font-family: 'Lato Regular', sans-serif;}
-.custom-dialog-container{
-    @apply lg:w-[1080px] w-full rounded-md
-    }
-    .text1{
-        font-family: Lato Bold !important;
-        color: #0d0d0e !important;
-        line-height: 128% !important;
-        font-weight: 400 !important;
-        font-size: 28px !important;
-    }
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Lato Regular", sans-serif;
+}
+.custom-dialog-container {
+  @apply lg:w-[1080px] w-full rounded-md;
+}
+.text1 {
+  font-family: Lato Bold !important;
+  color: #0d0d0e !important;
+  line-height: 128% !important;
+  font-weight: 400 !important;
+  font-size: 28px !important;
+}
+
+.error-toast {
+  background-color: #f44336;
+  color: #fff;
+}
+.success-toast {
+  background-color: green;
+  color: #fff;
+}

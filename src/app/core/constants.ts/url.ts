@@ -1,0 +1,18 @@
+export const urlConstants = {
+  GET_OTP: '/auth/sendOtp',
+  VERIFY_OTP: '/auth/verifyOtp',
+  GET_PRODUCTS: '/product?limit=',
+  ADD_PRODUCT: '/product',
+  UPDATE_PRODUCT: '/product/',
+  GET_OUTLETS: '/outlet',
+  ADD_OUTLET: '/outlet',
+  DELETE_OUTLET: '/outlet/',
+  UPDATE_OUTLET: '/outlet/',
+  GET_CATEGORY: '/category?limit=50',
+  ADD_CATEGORY: '/category',
+  UPDATE_CATEGORY: '/category/',
+  GET_USER: '/user',
+  ADD_USER: '/user/create',
+  UPDATE_USER: '/user/',
+  ADMIN_ORDERS: '/admin/report?startDate=',
+};

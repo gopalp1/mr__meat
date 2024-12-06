@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="login-container">
+  <div class="login-card">
+    <div *ngIf="!isOtpSent">
+      <h2>Login</h2>
+      <p>Enter your mobile number to receive an OTP</p>
+      <input
+        type="tel"
+        [(ngModel)]="mobileNumber"
+        placeholder="Enter mobile number"
+        maxlength="10"
+        class="mobile-input"
+        (keyup.enter)="sendOtp()"
+      />
+      <button (click)="sendOtp()" class="verify-btn">Send OTP</button>
+    </div>
+    <div *ngIf="isOtpSent">
+      <div class="back-btn">
+        <i (click)="goBack()" class="fa-solid fa-arrow-left icon"></i>
+      </div>
+      <h2>Verify OTP</h2>
+      <p>Enter the OTP sent to {{ mobileNumber }}</p>
+      <ng-otp-input
+        (onInputChange)="onOtpChange($event)"
+        [config]="configuration"
+      ></ng-otp-input>
+
+      <div class="actions">
+        <button (click)="resendOtp()" class="resend-btn">Resend OTP</button>
+        <button (click)="verifyOtp()" class="verify-btn">Verify OTP</button>
+      </div>
+    </div>
+  </div>
+</div>

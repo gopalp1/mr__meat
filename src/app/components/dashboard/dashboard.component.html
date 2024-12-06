@@ -1,0 +1,11 @@
+<app-header [privatePages]="true"></app-header>
+<div class="dashboard-container">
+  <div
+    class="dashboard-card"
+    *ngFor="let item of items; let i = index"
+    (click)="onItemClick(item.url)"
+  >
+    <img [src]="item.image" alt="{{ item.title }}" />
+    <span>{{ item.title }}</span>
+  </div>
+</div>

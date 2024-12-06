@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div style="min-height: 75vh; margin: 15px">
+  <div class="dashboard-meta theme-color-bg">
+    <div class="filters-container">
+      <mat-form-field appearance="fill" class="filter-field">
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="startPicker" [(ngModel)]="startDate" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="startPicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="filter-field">
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="endPicker" [(ngModel)]="endDate" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endPicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #endPicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="filter-field">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="selectedStatus">
+          <mat-option *ngFor="let status of statuses" [value]="status">
+            {{ status }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button (click)="getReport()" style="height: 58px">
+        Get report
+      </button>
+    </div>
+  </div>
+
+  <!-- Orders List -->
+  <div class="orders-list">
+    <mat-list>
+      <mat-list-item *ngFor="let order of orders" style="height: fit-content">
+        <div mat-line>Order ID: {{ order.id }}</div>
+        <div mat-line>Order Date: {{ order.date | date }}</div>
+        <div mat-line>Status: {{ order.status }}</div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.filters-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-field,
+button {
+  flex: 1;
+}
+
+button {
+  height: 58px;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .filter-field,
+  button {
+    width: 100%;
+    flex: none;
+  }
+}
+
+.orders-list {
+  margin-top: 24px;
+}
+
+mat-list-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.theme-color-bg {
+  background-color: #e4b1f0;
+  color: #fff;
+  padding: 10px;
+}
